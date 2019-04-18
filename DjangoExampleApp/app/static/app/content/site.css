@@ -31,6 +31,10 @@ body {
     color: rgba(0,0,0,0.22);
 }
 
+.footer {
+    background-color: rgb(233, 233, 233);
+}
+
 .hero-section {
     background:
         linear-gradient(
@@ -47,6 +51,10 @@ body {
 
 .hero-section h1 {
     font-size: 3.5em;
+}
+
+.hero-section h2 {
+    font-size: 2em;
 }
 
 /* Buttons */
@@ -89,7 +97,6 @@ body {
 }
 
 #home-three-columns-container .card:hover {
-    border: solid 4px;
     border-color: #b5b5b5;
     box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 }
@@ -97,6 +104,7 @@ body {
 #home-five-column-section {
     margin-top: 10em;
     margin-bottom: 10em;
+    background-color: #b5b5b5;
 }
 
 #home-five-columns-container {
@@ -110,9 +118,15 @@ body {
 }
 
 #home-five-columns-container .card {
-    border: none;
+    border: solid 4px;
     box-shadow: none;
+    transition: all .3s;
     text-align: center;
+}
+
+#home-five-columns-container .card:hover {
+    border-color: #b5b5b5;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 }
 
 #home-five-columns-container .card i {

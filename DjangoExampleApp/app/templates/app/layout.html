@@ -4,11 +4,15 @@
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>{{ title }} - Django Example Application</title>
+
         {% load staticfiles %}
+
         <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
         <link href="https://unpkg.com/ionicons@4.5.5/dist/css/ionicons.min.css" rel="stylesheet">
+
         <link rel="stylesheet" type="text/css" href="{% static 'app/content/bulma.min.css' %}" />
         <link rel="stylesheet" type="text/css" href="{% static 'app/content/site.css' %}" />
+
         <script src="{% static 'app/scripts/modernizr-2.6.2.js' %}"></script>
     </head>
 
@@ -36,15 +40,23 @@
             </div>
         </nav>
         <section id="main-content-container" class="section">
-            {% block content %}{% endblock %}
-        </section>
-        <footer>
 
+            {% block content %}{% endblock %}
+
+        </section>
+        <footer class="footer">
+            <div class="content has-text-centered">
+                <p>
+                    <strong>Django Exmaple App</strong> by <a href="https://tuningfreelance.com">Ethan Tuning</a>.
+                    Source Code: <a href="https://github.com/EthanTuning/django-example-app">GitHub</a>
+                </p>
+            </div>
         </footer>
 
         <script src="{% static 'app/scripts/jquery-1.10.2.js' %}"></script>
         <script src="{% static 'app/scripts/respond.js' %}"></script>
-    {% block scripts %}{% endblock %}
+
+        {% block scripts %}{% endblock %}
 
     </body>
 </html>
