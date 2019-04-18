@@ -94,5 +94,15 @@ body {
     text-align: center;
 }
 
+.home-two-columns-container {
+    padding-right: 10em;
+    padding-left: 10em;
+    padding-top: 3em;
+}
+
+.home-two-columns-container .column .content {
+    font-size: 1.5em;
+}
+
 /* About Page */
 

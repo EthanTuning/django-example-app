@@ -65,6 +65,8 @@
     <Content Include="app\static\app\content\bulma.min.css" />
     <Content Include="app\static\app\content\images\eduardo-flores-759717-unsplash.jpg" />
     <Content Include="app\static\app\content\images\good-free-photos-770677-unsplash.jpg" />
+    <Content Include="app\static\app\content\images\laura-colquitt-96833-unsplash.jpg" />
+    <Content Include="app\static\app\content\images\lina-loos-189519-unsplash.jpg" />
     <Content Include="app\static\app\content\images\placeholder.com-logo1.png" />
     <Content Include="requirements.txt" />
     <Content Include="app\static\app\content\site.css" />
