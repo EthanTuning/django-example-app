@@ -11,6 +11,12 @@ body {
     padding: 0;
 }
 
+#main-nav-bar {
+    padding: .5em;
+    padding-left: 15em;
+    padding-right: 15em;
+}
+
 /* Home Page */
 
 #home-hero-section {
@@ -24,10 +30,17 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     text-align: center;
+    margin-bottom: 5em;
 }
+
+#home-three-column-section {
+    margin-top: 5em;
+    margin-bottom: 5em;
+}
+
 #home-three-columns-container {
-    padding-right: 5%;
-    padding-left: 5%;
+    padding-right: 5em;
+    padding-left: 5em;
 }
 
 #home-three-columns-container .column {
@@ -37,6 +50,48 @@ body {
 
 #home-three-columns-container .card {
     border: solid 3px;
+    box-shadow: none;
+}
+
+#home-five-column-section {
+    margin-top: 10em;
+    margin-bottom: 10em;
+}
+
+#home-five-columns-container {
+    padding-right: 15em;
+    padding-left: 15em;
+}
+
+#home-five-columns-container .column {
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+#home-five-columns-container .card {
+    border: none;
+    box-shadow: none;
+    text-align: center;
+}
+
+#home-five-columns-container .card i {
+    height: 100%;
+    width: 100%;
+    font-size: 5em;
+}
+
+#home-two-column-section {
+    margin-top: 5em;
+    margin-bottom: 5em;
+}
+
+#home-two-column-section h3 {
+    text-align: center;
+}
+
+
+#home-two-column-section h4 {
+    text-align: center;
 }
 
 /* About Page */
