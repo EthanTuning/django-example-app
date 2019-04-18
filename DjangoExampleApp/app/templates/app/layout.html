@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>{{ title }} - Django Example Application</title>
+        {% load staticfiles %}
+        <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet"> 
+        <link rel="stylesheet" type="text/css" href="{% static 'app/content/bulma.min.css' %}" />
+        <link rel="stylesheet" type="text/css" href="{% static 'app/content/site.css' %}" />
+        <script src="{% static 'app/scripts/modernizr-2.6.2.js' %}"></script>
+    </head>
+
+    <body>
+        <nav class="navbar" role="navigation" aria-label="main navigation">
+            <div class="navbar-brand">
+                <a class="navbar-item" href="{% url 'home' %}">
+                    <img src="" width="112" height="28" />
+                </a>
+                <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbar-main">
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                </a>
+            </div>
+            <div id="navbar-main" class="navbar-menu">
+                <div class="navbar-start">
+                    <a class="navbar-item" href="{% url 'home' %}">
+                        Home
+                    </a>
+                    <a class="navbar-item" href="{% url 'about' %}">
+                        About
+                    </a>
+                </div>
+            </div>
+        </nav>
+        <section id="main-content-container" class="section">
+            {% block content %}{% endblock %}
+        </section>
+
+        <script src="{% static 'app/scripts/jquery-1.10.2.js' %}"></script>
+        <script src="{% static 'app/scripts/respond.js' %}"></script>
+    {% block scripts %}{% endblock %}
+
+    </body>
+</html>

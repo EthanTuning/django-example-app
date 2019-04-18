@@ -1,0 +1,99 @@
+{% extends "app/layout.html" %}
+
+{% block content %}
+{% load static %}
+
+<section id="home-hero-section" class="hero is-info is-large">
+    <div class="hero-body">
+        <div class="container">
+            <h1 class="title">
+                Hello World!
+            </h1>
+            <h2 class="subtitle">
+                This is a Django Example App
+            </h2>
+        </div>
+    </div>
+</section>
+<section id="home-three-column-section" class="section">
+    <div id="home-three-columns-container" class="columns">
+        <div class="column">
+            <div class="card">
+                <div class="card-image">
+                    <figure class="image is-4by3">
+                        <img src="{% static 'app/content/images/annie-spratt-682535-unsplash.jpg' %}" alt="Placeholder Image">
+                    </figure>
+                </div>
+                <div class="card-content">
+                    <div class="content">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Nam hendrerit mauris ut risus porttitor, vel suscipit massa consequat.
+                        Curabitur iaculis iaculis nisi vitae varius. Aliquam eget viverra mi. 
+                        Suspendisse imperdiet felis non dui tincidunt rutrum. 
+                        Nullam dictum ex sit amet velit tincidunt ullamcorper.
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="column">
+            <div class="card">
+                <div class="card-image">
+                    <figure class="image is-4by3">
+                        <img src="{% static 'app/content/images/eduardo-flores-759717-unsplash.jpg' %}" alt="Placeholder Image">
+                    </figure>
+                </div>
+                <div class="card-content">
+                    <div class="content">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Nam hendrerit mauris ut risus porttitor, vel suscipit massa consequat.
+                        Curabitur iaculis iaculis nisi vitae varius. Aliquam eget viverra mi. 
+                        Suspendisse imperdiet felis non dui tincidunt rutrum. 
+                        Nullam dictum ex sit amet velit tincidunt ullamcorper.
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="column">
+            <div class="card">
+                <div class="card-image">
+                    <figure class="image is-4by3">
+                        <img src="{% static 'app/content/images/good-free-photos-770677-unsplash.jpg' %}" alt="Placeholder Image">
+                    </figure>
+                </div>
+                <div class="card-content">
+                    <div class="content">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Nam hendrerit mauris ut risus porttitor, vel suscipit massa consequat.
+                        Curabitur iaculis iaculis nisi vitae varius. Aliquam eget viverra mi. 
+                        Suspendisse imperdiet felis non dui tincidunt rutrum. 
+                        Nullam dictum ex sit amet velit tincidunt ullamcorper.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="home-five-column-section" class="section">
+    <div id="home-five-columns-container" class="columns">
+        <div class="column">
+
+        </div>
+        <div class="column">
+
+        </div>
+        <div class="column">
+
+        </div>
+        <div class="column">
+
+        </div>
+        <div class="column">
+
+        </div>
+    </div>
+</section>
+
+
+{% endblock %}
