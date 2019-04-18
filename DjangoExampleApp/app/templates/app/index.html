@@ -3,7 +3,7 @@
 {% block content %}
 {% load static %}
 
-<section id="home-hero-section" class="hero is-info is-large">
+<section class="hero is-info is-large hero-section">
     <div class="hero-body">
         <div class="container">
             <h1 class="title">
@@ -12,6 +12,7 @@
             <h2 class="subtitle">
                 This is a Django Example App
             </h2>
+            <a href="{% url 'about' %}" class="button">About</a>
         </div>
     </div>
 </section>
@@ -167,6 +168,8 @@
                 Suspendisse imperdiet felis non dui tincidunt rutrum. 
                 Nullam dictum ex sit amet velit tincidunt ullamcorper.
             </div>
+            <a href="{% url 'home' %}" class="button">Button</a>
+            <a href="{% url 'home' %}" class="button">Button</a>
         </div>
         <div class="column">
             <div class="content">
@@ -192,7 +195,10 @@
                 Suspendisse imperdiet felis non dui tincidunt rutrum. 
                 Nullam dictum ex sit amet velit tincidunt ullamcorper.
             </div>
+            <a href="{% url 'home' %}" class="button">Button</a>
+            <a href="{% url 'home' %}" class="button">Button</a>
         </div>
     </div>
 </section>
+
 {% endblock %}

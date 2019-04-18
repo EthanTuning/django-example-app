@@ -1,10 +1,31 @@
 {% extends "app/layout.html" %}
 
 {% block content %}
+{% load static %}
 
-<h2>{{ title }}.</h2>
-<h3>{{ message }}</h3>
+<section class="hero is-info is-medium hero-section">
+    <div class="hero-body">
+        <div class="container">
+            <h1 class="title">
+                About
+            </h1>
+        </div>
+    </div>
+</section>
 
-<p>Use this area to provide additional information.</p>
+<section id="about-section" class="section">
+    <div id="about-blurb" class="content">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        Nam hendrerit mauris ut risus porttitor, vel suscipit massa consequat.
+        Curabitur iaculis iaculis nisi vitae varius. Aliquam eget viverra mi. 
+        Suspendisse imperdiet felis non dui tincidunt rutrum. 
+        Nullam dictum ex sit amet velit tincidunt ullamcorper.
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        Nam hendrerit mauris ut risus porttitor, vel suscipit massa consequat.
+        Curabitur iaculis iaculis nisi vitae varius. Aliquam eget viverra mi. 
+        Suspendisse imperdiet felis non dui tincidunt rutrum. 
+        Nullam dictum ex sit amet velit tincidunt ullamcorper.
+    </div>
+</section>
 
 {% endblock %}

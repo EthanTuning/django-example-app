@@ -14,8 +14,7 @@ def home(request):
         request,
         'app/index.html',
         {
-            'title':'Home Page',
-            'year':datetime.now().year,
+            'title':'Home',
         }
     )
 
@@ -27,7 +26,5 @@ def about(request):
         'app/about.html',
         {
             'title':'About',
-            'message':'Your application description page.',
-            'year':datetime.now().year,
         }
     )
