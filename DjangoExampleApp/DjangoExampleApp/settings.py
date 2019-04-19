@@ -26,7 +26,7 @@ SECRET_KEY = '9a911d1a-4086-4374-b42e-d3637a8a768e'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['localhost','frozen-beach-23111.herokuapp.com','frozen-beach-23111.herokuapp.com/', 'https://frozen-beach-23111.herokuapp.com/', 'https://frozen-beach-23111.herokuapp.com']
 
 
 # Application definition
@@ -44,6 +44,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE_CLASSES = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',

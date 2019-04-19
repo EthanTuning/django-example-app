@@ -11,9 +11,31 @@ body {
     padding: 0;
 }
 
-/* Home Page */
+#main-nav-bar {
+    padding: .5em;
+    padding-left: 20em;
+    padding-right: 20em;
+}
 
-#home-hero-section {
+.navbar-brand {
+    padding-right: 3em;
+}
+
+#navbar-main-menu a {
+    font-weight: bold;
+    padding-left: 2em;
+    padding-right: 2em;
+}
+
+#navbar-main-menu a:hover {
+    color: rgba(0,0,0,0.22);
+}
+
+.footer {
+    background-color: rgb(233, 233, 233);
+}
+
+.hero-section {
     background:
         linear-gradient(
             rgba(45, 45, 45, .25),
@@ -24,10 +46,43 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     text-align: center;
+    margin-bottom: 2em;
 }
+
+.hero-section h1 {
+    font-size: 3.5em;
+}
+
+.hero-section h2 {
+    font-size: 2em;
+}
+
+/* Buttons */
+
+.button {
+    border: solid 4px;
+    padding-right: 2em;
+    padding-left: 2em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    font-size: 1.5em;
+    font-weight: bold;
+    transition: all .3s;
+}
+
+.button:hover {
+    color: #b5b5b5;
+}
+
+/* Home Page */
+
+#home-three-column-section {
+    margin-bottom: 5em;
+}
+
 #home-three-columns-container {
-    padding-right: 5%;
-    padding-left: 5%;
+    padding-right: 5em;
+    padding-left: 5em;
 }
 
 #home-three-columns-container .column {
@@ -36,8 +91,78 @@ body {
 }
 
 #home-three-columns-container .card {
-    border: solid 3px;
+    border: solid 4px;
+    box-shadow: none;
+    transition: all .3s;
+}
+
+#home-three-columns-container .card:hover {
+    border-color: #b5b5b5;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+#home-five-column-section {
+    margin-top: 10em;
+    margin-bottom: 10em;
+    background-color: #b5b5b5;
+}
+
+#home-five-columns-container {
+    padding-right: 15em;
+    padding-left: 15em;
+}
+
+#home-five-columns-container .column {
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+#home-five-columns-container .card {
+    border: solid 4px;
+    box-shadow: none;
+    transition: all .3s;
+    text-align: center;
+}
+
+#home-five-columns-container .card:hover {
+    border-color: #b5b5b5;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+#home-five-columns-container .card i {
+    height: 100%;
+    width: 100%;
+    font-size: 5em;
+}
+
+#home-two-column-section {
+    margin-top: 5em;
+    margin-bottom: 5em;
+}
+
+#home-two-column-section h3 {
+    text-align: center;
+}
+
+
+#home-two-column-section h4 {
+    text-align: center;
+}
+
+.home-two-columns-container {
+    padding-right: 10em;
+    padding-left: 10em;
+    padding-top: 3em;
+}
+
+.home-two-columns-container .column .content {
+    font-size: 1.5em;
 }
 
 /* About Page */
 
+#about-blurb {
+    font-size: 1.5em;
+    padding-right: 10em;
+    padding-left: 10em;
+}
