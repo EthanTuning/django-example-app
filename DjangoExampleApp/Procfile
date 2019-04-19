@@ -1,0 +1,1 @@
+web: gunicorn DjangoExampleApp.wsgi --log-file -
