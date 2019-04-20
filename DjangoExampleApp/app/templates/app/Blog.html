@@ -1,0 +1,31 @@
+﻿{% extends "app/layout.html" %}
+
+{% block content %}
+{% load static %}
+
+<script src="{% static 'app/scripts/editor.js' %}"></script>
+<script src="{% static 'app/scripts/blog-page.js' %}"></script>
+
+<section class="hero is-info is-medium hero-section">
+    <div class="hero-body">
+        <div class="container">
+            <h1 class="title">
+                Blog
+            </h1>
+        </div>
+    </div>
+</section>
+
+<section id="articles-section" class="section">
+    <div id="articles-columns-container" class="columns">
+        
+    </div>
+</section>
+
+<section class="section">
+    <div id="editor-container">
+
+    </div>
+</section>
+
+{% endblock %}

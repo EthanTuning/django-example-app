@@ -28,3 +28,14 @@ def about(request):
             'title':'About',
         }
     )
+
+def blog(request):
+    """Renders the blog page"""
+    assert isinstance(request, HttpRequest)
+    return render(
+        request,
+        'app/blog.html',
+        {
+            'title':'Blog',
+        }
+    )
