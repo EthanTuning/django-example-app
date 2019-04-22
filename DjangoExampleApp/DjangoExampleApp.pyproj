@@ -70,7 +70,7 @@
     <Content Include="app\static\app\content\images\placeholder.com-logo1.png" />
     <Content Include="app\static\app\scripts\blog-page.js" />
     <Content Include="app\static\app\scripts\editor.js" />
-    <Content Include="app\templates\app\article-short.html" />
+    <Content Include="app\templates\app\article-list.html" />
     <Content Include="app\templates\app\article.html" />
     <Content Include="app\templates\app\blog.html" />
     <Content Include="requirements.txt" />

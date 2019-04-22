@@ -59,7 +59,8 @@ body {
 
 /* Buttons */
 
-.button {
+.button,
+button {
     border: solid 4px;
     padding-right: 2em;
     padding-left: 2em;
@@ -68,9 +69,18 @@ body {
     font-size: 1.5em;
     font-weight: bold;
     transition: all .3s;
+    background-color: #ffffff!important;
 }
 
-.button:hover {
+button {
+    padding-right: 1em;
+    padding-left: 1em;
+    padding-top: .5em;
+    padding-bottom: .5em;
+}
+
+.button:hover,
+button:hover {
     color: #b5b5b5;
 }
 
@@ -165,4 +175,12 @@ body {
     font-size: 1.5em;
     padding-right: 10em;
     padding-left: 10em;
+}
+
+/* Blog Page */
+
+#articles-section h3 {
+
+    text-align: center;
+
 }
