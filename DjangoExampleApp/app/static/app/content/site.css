@@ -180,7 +180,10 @@ button:hover {
 /* Blog Page */
 
 #articles-section h3 {
-
     text-align: center;
+}
 
+#editor-section {
+    margin: 0 auto;
+    width: 80%;
 }
