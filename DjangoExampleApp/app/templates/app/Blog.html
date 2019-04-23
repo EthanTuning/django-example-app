@@ -22,9 +22,11 @@
 
     </div>
     <center>
-        <button id="write-new-article-btn">Write Article</button>
+        <button id="write-new-article-btn">Write New Article</button>
     </center>
 </section>
+
+{% csrf_token %}
 
 <section id="editor-section" class="section" style="display:none">
     <div id="editor-container" class="content"></div>
