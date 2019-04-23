@@ -7,7 +7,6 @@ from django.http import HttpRequest
 from django.http import HttpResponse
 from django.template import RequestContext
 from datetime import datetime
-from models import Article
 import json
 
 def home(request):
@@ -37,14 +36,16 @@ def blog(request):
     if request.method == "POST":
 
         jsonData = json.loads(request.body)
-        """content = jsonData['blocks']"""
+        """
+
         article = Article()
         article.title = jsonData['title']
         article.author = jsonData['author']
-        article.date = jsonData['date']
         article.text = jsonData['']
 
         article.save()
+        
+        """
 
         return HttpResponse("OK")
 
