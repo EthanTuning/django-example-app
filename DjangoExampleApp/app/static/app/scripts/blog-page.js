@@ -19,12 +19,17 @@ function writeNewArticle() {
     });
 
     $('#save-new-article-btn').click(function () {
+
         saveNewArticle(editor);
+
     });
 
     $('#cancel-new-article-btn').click(function () {
+
         cancelNewArticle(editor);
+
     });
+
 }
 
 function saveNewArticle(editor) {
@@ -42,6 +47,7 @@ function saveNewArticle(editor) {
         }
 
         $.ajaxSetup({
+
             beforeSend: function (xhr, settings) {
 
                 if (!csrfSafeMethod(settings.type) && !this.crossDomain) {
@@ -51,14 +57,17 @@ function saveNewArticle(editor) {
                 }
 
             }
+
         });
 
         $.ajax({
+
             url: '/blog',
             type: 'POST',
             contentType: 'application/json; charset=utf-8',
             data: JSON.stringify(outputData),
             datatype: 'text'
+
         });
 
     }).catch((error) => {

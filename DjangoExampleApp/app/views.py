@@ -7,10 +7,11 @@ from django.http import HttpRequest
 from django.http import HttpResponse
 from django.template import RequestContext
 from datetime import datetime
+from models import Article
 import json
 
 def home(request):
-    """Renders the home page."""
+
     assert isinstance(request, HttpRequest)
     return render(
         request,
@@ -21,7 +22,7 @@ def home(request):
     )
 
 def about(request):
-    """Renders the about page."""
+
     assert isinstance(request, HttpRequest)
     return render(
         request,
@@ -34,13 +35,21 @@ def about(request):
 def blog(request):
 
     if request.method == "POST":
+
         jsonData = json.loads(request.body)
-        content = jsonData['blocks']
+        """content = jsonData['blocks']"""
+        article = Article()
+        article.title = jsonData['title']
+        article.author = jsonData['author']
+        article.date = jsonData['date']
+        article.text = jsonData['']
+
+        article.save()
 
         return HttpResponse("OK")
 
-    else: 
-        """Renders the blog page"""
+    else:
+
         assert isinstance(request, HttpRequest)
         return render(
             request,
