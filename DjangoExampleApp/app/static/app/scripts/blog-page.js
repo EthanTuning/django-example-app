@@ -117,7 +117,9 @@ function saveNewArticle(editor) {
             type: 'POST',
             contentType: 'application/json; charset=utf-8',
             data: JSON.stringify({
-                postInfo: JSON.stringify($('#post-info-form').serializeArray()),
+                title: $('#title-input').val(),
+                author: $('#author-input').val(),
+                date: $('#date-input').val(),
                 post: JSON.stringify(outputData)
             }),
             datatype: 'json'
