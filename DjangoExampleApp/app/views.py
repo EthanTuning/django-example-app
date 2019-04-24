@@ -10,7 +10,6 @@ from datetime import datetime
 import json
 
 def home(request):
-
     assert isinstance(request, HttpRequest)
     return render(
         request,
@@ -21,7 +20,6 @@ def home(request):
     )
 
 def about(request):
-
     assert isinstance(request, HttpRequest)
     return render(
         request,
@@ -32,9 +30,7 @@ def about(request):
     )
 
 def blog(request):
-
     if request.method == "POST":
-
         jsonData = json.loads(request.body)
         """
 
@@ -50,7 +46,6 @@ def blog(request):
         return HttpResponse("OK")
 
     else:
-
         assert isinstance(request, HttpRequest)
         return render(
             request,

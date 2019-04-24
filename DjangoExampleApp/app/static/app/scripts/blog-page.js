@@ -14,11 +14,11 @@ function writeNewArticle() {
     var editor = new EditorJS({
 
         holderId: 'editor-container',
-        autofocus: true,
+        autofocus: false,
         tools: {
             header: {
                 class: Header,
-                inlineToolbar: ['link'],
+                inlineToolbar: true,
                 config: {
                     placeholder: 'Header'
                 },
@@ -37,8 +37,8 @@ function writeNewArticle() {
                 class: Quote,
                 inlineToolbar: true,
                 config: {
-                quotePlaceholder: 'Enter a quote',
-                captionPlaceholder: 'Quote\'s author',
+                    quotePlaceholder: 'Enter a quote',
+                    captionPlaceholder: 'Quote\'s author',
                 },
                 shortcut: 'CMD+SHIFT+O'
             },
@@ -60,7 +60,11 @@ function writeNewArticle() {
             embed: Embed
         },
         data: {
-
+            blocks: [
+                {
+                    type: 'header'
+                }
+            ]
         }
 
     });
@@ -112,8 +116,11 @@ function saveNewArticle(editor) {
             url: '/blog',
             type: 'POST',
             contentType: 'application/json; charset=utf-8',
-            data: JSON.stringify(outputData),
-            datatype: 'text'
+            data: {
+                postInfo: $('#post-info-form').serialize(),
+                post: JSON.stringify(outputData)
+            },
+            datatype: 'json'
 
         });
 
