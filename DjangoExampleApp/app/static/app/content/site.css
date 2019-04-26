@@ -102,13 +102,8 @@ button:hover {
 }
 
 #home-three-columns-container {
-    padding-right: 5em;
-    padding-left: 5em;
-}
-
-#home-three-columns-container .column {
-    padding-right: 3em;
-    padding-left: 3em;
+    width: 90%;
+    margin: 0 auto;
 }
 
 #home-three-columns-container .card {
@@ -129,8 +124,8 @@ button:hover {
 }
 
 #home-five-columns-container {
-    padding-right: 15em;
-    padding-left: 15em;
+    width: 90%;
+    margin: 0 auto;
 }
 
 #home-five-columns-container .column {
@@ -171,9 +166,9 @@ button:hover {
 }
 
 .home-two-columns-container {
-    padding-right: 10em;
-    padding-left: 10em;
+    width: 80%;
     padding-top: 3em;
+    margin: 0 auto;
 }
 
 .home-two-columns-container .column .content {
@@ -192,9 +187,65 @@ button:hover {
 
 #articles-section h3 {
     text-align: center;
+    font-size: 3em;
 }
 
 #editor-section {
     margin: 0 auto;
     width: 80%;
+}
+
+#post-info-form {
+    margin: 0 auto;
+    width: 55%;
+}
+
+input[type=text],
+input[type=date] {
+    margin-bottom: 1.5em;
+    border: solid 4px;
+    border-color: #4a4a4a;
+    height: 3.5em;
+}
+
+#editor-container {
+    border: solid 4px;
+}
+
+#articles-columns-container {
+    width: 90%;
+    margin: 0 auto;
+    padding-top: 3em;
+    padding-bottom: 3em;
+}
+
+.article-card {
+    border: solid 4px;
+    box-shadow: none;
+    transition: all .3s;
+}
+
+.article-card:hover {
+    border-color: #b5b5b5;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+.article-card h4 {
+    text-align: center;
+    font-size: 1.75em;
+}
+
+.article-card h5 {
+    text-align: center;
+    font-size: 1.25em;
+}
+
+.article-card h6 {
+    text-align: center;
+    font-size: 1em;
+    padding-top: 4em;
+}
+
+.article-card button {
+    margin-bottom: 1em;
 }

@@ -116,10 +116,12 @@ function saveNewArticle(editor) {
             url: '/blog',
             type: 'POST',
             contentType: 'application/json; charset=utf-8',
-            data: {
-                postInfo: $('#post-info-form').serialize(),
+            data: JSON.stringify({
+                title: $('#title-input').val(),
+                author: $('#author-input').val(),
+                date: $('#date-input').val(),
                 post: JSON.stringify(outputData)
-            },
+            }),
             datatype: 'json'
 
         });

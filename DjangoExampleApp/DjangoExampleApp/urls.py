@@ -17,5 +17,5 @@ import app.views
 urlpatterns = [
     url(r'^$', app.views.home, name='home'),
     url(r'^about$', app.views.about, name='about'),
-    url(r'^blog$', app.views.blog, name='blog'),
+    url(r'^blog$', app.views.Blog.as_view(), name='blog'),
 ]

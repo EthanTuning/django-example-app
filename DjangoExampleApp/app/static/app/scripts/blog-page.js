@@ -132,7 +132,7 @@ function saveNewArticle(editor) {
 
     });
     
-    location.reload();
+    location.reload(true);
 
 }
 
