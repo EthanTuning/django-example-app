@@ -1,26 +1,20 @@
-﻿<script>
-
-
-
-</script>
-
-{% for article in object_list %}
+﻿{% for article in object_list %}
     
-    <div class="column is-one-third">
-        <div class="card article-card">
-            <div class="card-content">
-                <h4 class="title">{{ article.title }}</h4>
-                <h5 class="title">by: {{ article.author }}</h5>
-                <h6 class="title">Date: {{ article.date }}</h6>
-            </div>
-            <center>
-                <button class="read-article-btn">Read</button>
-            </center>
+<div class="column is-one-third">
+    <div class="card article-card">
+        <div class="card-content">
+            <h4 class="title">{{ article.title }}</h4>
+            <h5 class="title">by: {{ article.author }}</h5>
+            <h6 class="title">Date: {{ article.date }}</h6>
         </div>
+        <center>
+            <a href="/article/{{ article.id }}" class="button read-article-btn">Read</a>
+        </center>
     </div>
+</div>
 
 {% empty %}
 
-    <h5 class="title">No Articles To Show</h5>
+<h5 class="title">No Articles To Show</h5>
 
 {% endfor %}

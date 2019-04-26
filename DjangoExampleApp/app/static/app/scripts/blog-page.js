@@ -88,6 +88,7 @@ function saveNewArticle(editor) {
     editor.saver.save().then((outputData) => {
 
         console.log('Article data: ', outputData);
+        console.log(outputData['blocks']);
 
         var csrftoken = $.cookie('csrftoken');
 
@@ -120,7 +121,7 @@ function saveNewArticle(editor) {
                 title: $('#title-input').val(),
                 author: $('#author-input').val(),
                 date: $('#date-input').val(),
-                post: JSON.stringify(outputData)
+                post: JSON.stringify(outputData['blocks'])
             }),
             datatype: 'json',
             success: function (post) {
@@ -129,8 +130,6 @@ function saveNewArticle(editor) {
             }
 
         });
-        
-        //location.reload(true);
 
     }).catch((error) => {
 

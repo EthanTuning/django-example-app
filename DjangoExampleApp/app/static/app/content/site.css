@@ -215,6 +215,10 @@ input[type=date] {
     margin-bottom: 2em;
 }
 
+#articles-columns-container h5 {
+    margin: 0 auto;
+}
+
 #articles-columns-container {
     width: 90%;
     margin: 0 auto;
@@ -249,6 +253,6 @@ input[type=date] {
     padding-top: 4em;
 }
 
-.article-card button {
+.article-card a {
     margin-bottom: 1em;
 }

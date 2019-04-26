@@ -52,3 +52,8 @@ class Blog(generic.ListView):
         article.save()
 
         return HttpResponse("OK")
+
+class ArticleDetailView(generic.DetailView):
+
+    model = Article
+    template_name = 'app/article.html'

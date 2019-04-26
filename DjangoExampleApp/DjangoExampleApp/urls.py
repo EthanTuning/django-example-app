@@ -18,4 +18,5 @@ urlpatterns = [
     url(r'^$', app.views.home, name='home'),
     url(r'^about$', app.views.about, name='about'),
     url(r'^blog$', app.views.Blog.as_view(), name='blog'),
+    url(r'^article/(?P<pk>\d+)$', app.views.ArticleDetailView.as_view(), name="detail")
 ]
