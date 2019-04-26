@@ -122,9 +122,15 @@ function saveNewArticle(editor) {
                 date: $('#date-input').val(),
                 post: JSON.stringify(outputData)
             }),
-            datatype: 'json'
+            datatype: 'json',
+            success: function (post) {
+                if (post.error) return;
+                $(document).ajaxStop(function () { location.reload(true); });
+            }
 
         });
+        
+        //location.reload(true);
 
     }).catch((error) => {
 
@@ -132,8 +138,6 @@ function saveNewArticle(editor) {
 
     });
     
-    location.reload(true);
-
 }
 
 function cancelNewArticle(editor) {
@@ -143,6 +147,6 @@ function cancelNewArticle(editor) {
     $('#editor-section').hide();
     $('#write-new-article-btn').show();
 
-    location.reload();
+    window.location.reload();
 
 }
