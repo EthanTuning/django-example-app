@@ -13,15 +13,12 @@ body {
 
 #main-nav-bar {
     padding: .5em;
-    padding-left: 20em;
-    padding-right: 20em;
-}
-
-.navbar-brand {
-    padding-right: 3em;
+    padding-left: 1em;
+    padding-right: 1em;
 }
 
 #navbar-main-menu a {
+    font-size: 1.5em;
     font-weight: bold;
     padding-left: 2em;
     padding-right: 2em;
@@ -255,4 +252,18 @@ input[type=date] {
 
 .article-card a {
     margin-bottom: 1em;
+}
+
+.hero-body h4 {
+    font-size: 4em;
+}
+
+.hero-body h5 {
+    font-size: 3em;
+    font-weight: 400;
+}
+
+.hero-body h6 {
+    font-size: 1.5em;
+    font-weight: 400;
 }

@@ -29,78 +29,79 @@
     </div>
 </section>
 <section id="detail-article-container" class="section">
-    <div id="editor-container"></div>
-    <script>
+    <div id="editor-container" class="content"></div>
+    <script type="text/javascript">
     
-        $(document).ready(init)
+        $(document).ready(init);
 
         function init() {
-
-        var articleJson = {{ article.articleJson | safe }};
-        var editorData = JSON.stringify(articleJson);
-        console.log(editorData);
+           
+            var jsonString = {{ article.articleJson | safe }}
+            console.log(jsonString);
         
-        var editor = new EditorJS({
+            var editor = new EditorJS({
 
-        holderId: 'editor-container',
-        autofocus: false,
-        tools: {
-            header: {
-                class: Header,
-                inlineToolbar: true,
-                config: {
-                    placeholder: 'Header'
+                holderId: 'editor-container',
+                autofocus: false,
+                tools: {
+                    header: {
+                        class: Header,
+                        inlineToolbar: false
+                    },
+                    list: {
+                        class: List,
+                        inlineToolbar: false
+                    },
+                    checklist: {
+                        class: Checklist,
+                        inlineToolbar: false
+                    },
+                    quote: {
+                        class: Quote,
+                        inlineToolbar: false
+                    },
+                    warning: Warning,
+                    marker: {
+                        class:  Marker
+                    },
+                    code: {
+                        class:  CodeTool
+                    },
+                    delimiter: Delimiter,
+                    inlineCode: {
+                        class: InlineCode
+                    },
+                    linkTool: LinkTool,
+                    embed: Embed
                 },
-                shortcut: 'CMD+SHIFT+H'
-            },
-            list: {
-                class: List,
-                inlineToolbar: true,
-                shortcut: 'CMD+SHIFT+L'
-            },
-            checklist: {
-                class: Checklist,
-                inlineToolbar: true,
-            },
-            quote: {
-                class: Quote,
-                inlineToolbar: true,
-                config: {
-                    quotePlaceholder: 'Enter a quote',
-                    captionPlaceholder: 'Quote\'s author',
-                },
-                shortcut: 'CMD+SHIFT+O'
-            },
-            warning: Warning,
-            marker: {
-                class:  Marker,
-                shortcut: 'CMD+SHIFT+M'
-            },
-            code: {
-                class:  CodeTool,
-                shortcut: 'CMD+SHIFT+C'
-            },
-            delimiter: Delimiter,
-            inlineCode: {
-                class: InlineCode,
-                shortcut: 'CMD+SHIFT+C'
-            },
-            linkTool: LinkTool,
-            embed: Embed
-        },
-        data: {
-            blocks: [
-                {
-                    type: 'header'
+                data: {
+                    blocks:
+                        jsonString
                 }
-            ]
+            });
+        
         }
 
-    });
-        
-    }
-
     </script>
+    <style>
+
+        #editor-container {
+            pointer-events: none !important;
+        }
+
+        .ce-toolbar__actions {
+            display: none !important;
+        }
+
+        .ce-toolbar__content {
+            display: none !important;
+        }
+
+        .ce-inline-toolbar {
+            display: none !important;
+        }
+
+    </style>
 </section>
 
 {% endblock %}
